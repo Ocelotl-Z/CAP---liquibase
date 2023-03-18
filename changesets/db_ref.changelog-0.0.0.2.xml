@@ -7,19 +7,12 @@
                         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet author="OcelotlZ" id="1">
+    <changeSet author="OcelotlZ" id="procedimeinto-buscar">
         <createProcedure
             dbms="mysql"
-            encoding="UTF-8"
-            procedureName="findUser"
-            relativeToChangelogFile="true"
-            replaceIfExists="false"
-            schemaName="public">
-            CREATE PROCEDURE findUser(IN USERID INT)
-            BEGIN
-            SELECT * FROM users WHERE ID = USERID ;
-            END;
-        </createProcedure>
+            procedureName="holaMundo"
+            replaceIfExists="false"> DELIMITER $$ CREATE PROCEDURE `HOLAMUNDO`() SELECT "HOLA
+            MUNDO"$$ DELIMITER ; </createProcedure>
     </changeSet>
 
 </databaseChangeLog>

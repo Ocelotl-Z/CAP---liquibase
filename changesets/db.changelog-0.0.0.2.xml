@@ -7,19 +7,19 @@
                         http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-latest.xsd
                         http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-latest.xsd">
 
-    <changeSet author="OcelotlZ" id="1">
-        <createTable tableName="USERS">
+    <changeSet id="1" author="OcelotlZ">
+        <createTable tableName="CARS">
             <column autoIncrement="true" name="ID" type="INT">
-                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_8" />
+                <constraints nullable="false" primaryKey="true" primaryKeyName="CONSTRAINT_16" />
             </column>
-            <column name="NAME" type="VARCHAR(50)">
+            <column name="MODEL" type="VARCHAR(50)">
                 <constraints nullable="false" />
             </column>
-            <column name="LASTNAME" type="VARCHAR(50)" />
-            <column name="EMAIL" type="VARCHAR(50)" />
-            <column name="AGE" type="INT" />
-            <column name="MONEY" type="DOUBLE" />
+            <column name="BRAND" type="VARCHAR(50)" />
+            <column name="DIMENSIONS" type="VARCHAR(50)" />
+            <column name="COLOR" type="VARCHAR(50)" />
+            <column name="YEAR" type="DATE" />
         </createTable>
     </changeSet>
-    
+
 </databaseChangeLog>
