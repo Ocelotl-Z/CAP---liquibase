@@ -1,33 +1,13 @@
-# Liquibase
-## Source Control for your database
+# CAP Liquibase
 
-Es una libreria opensource para el manejo y ejecución de cambios en base de datos.
+Con los conocimientos y conceptos adquiridos en el curso se pide lo siguiente:
+1.	Utilice el motor de base de datos relacional de su preferencia.
+2.	Estructure su proyecto de **Liquibase** conforme a las mejores prácticas y configure el archivo properties con los parámetros necesarios.
+3.	Generar un **changelog** con sus **changesets** para crear una tabla en un esquema de base de datos nuevo, la tabla deberá tener al menos 5 atributos.
+4.	Generar la tabla anterior en otra base de datos nueva.
+5.	Generar una nueva tabla con 6 atributos en la base de datos del paso número 3.
+6.	Realizar una operación de **rollback** en la base de datos del punto número cuatro .
+7.	Generar un **stored procedure** en la base de datos del punto número 4.
+8.	Generar un **changelog** desde la base de datos existente del punto número 3.
+9.	Generar el **changelog** de diferencias **(diffChangeLog)** entre las dos bases de datos existentes.
 
-## Descripción
-Con liquibase podrás llevar el control de versiones de cualquier tipo de base de datos relaciónal, podras llevar una correcta administración de base de datos con tus clientes, sabrás en que version se encuentra cada ambiente y podrás fácilmente hacer refactoring a tus modelos.
-
-Serás capaz de poder construir esquema en cualquier base de datos con un solo desarrollo y podrás integrar la administración de sus bases de datos a la herramienta fácilmente.
-
-## Documentación
-
-
-Mas detalles en: 
-[Pagina oficial liquibase](http://www.liquibase.org/)
-
-## Comandos que se pueden ejecutar para distintos propositos:
-
-## Generar un changelog desde una base de datos existente
-
-    liquibase --changeLogFile="changesets/db.changelog-#.#.#.#.xml" generateChangeLog
-
-## Update
-
-    liquibase --changeLogFile="changesets/db.changelog-master.xml" update
-
-## Rollback a un changeset anterior
-
-    liquibase --changeLogFile="changesets/db.changelog-master.xml" rollbackCount 1
-
-## Generar un changelog de diferencias
-
-    liquibase --changeLogFile="changesets/db.changelog-#.#.#.#.xml" diffChangeLog
